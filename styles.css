@@ -1,0 +1,154 @@
+:root {
+    --back-color: #309898;
+    --search-back: #FF9F00;
+    --button-color: #F4631E;
+    --list-color: #CB0404;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 550px){
+    h1 {
+        font-size: 2em;
+        width: 450px;
+    }
+
+    #search-form, .top-container, .bottom-container {
+        width: 95%;
+    }
+
+    .type {
+        width: 75px;
+    }
+
+    .container {
+        width: 450px;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--back-color);
+    color: #fff;
+    font-family: "Edu QLD Beginner", cursive;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: var(--list-color);
+}
+
+tr {
+    border-bottom: 5px solid var(--search-back);
+}
+
+td, th {
+    text-align: center;
+    padding: 8px;
+}
+
+th:nth-child(even), td:nth-child(even) {
+    border-left: 5px solid var(--search-back);
+}
+
+.container {
+    width: 425px;
+    margin: 25px 0;
+    background-color: var(--search-back);
+    border: 1px solid var(--search-back);
+    border-radius: 15px;
+    box-shadow: 10px 10px 0px 0px rgba(190, 124, 1, 0.75);
+}
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 8px;
+    padding: 10px;
+    background-color: var(--search-back);
+    min-height: 200px;
+    font-size: 1.5rem;
+}
+
+.output {
+    margin: 10px 0;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.output, #search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.name-and-id {
+    height: 28px;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.size, #special-description {
+    font-size: 1.2rem;
+}
+
+#types {
+    min-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+#creature-name, #special-name {
+    font-weight: bold;
+}
+
+#search-form {
+    flex-wrap: wrap;
+    margin: 10px, 0;
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+    gap: 10px;
+}
+
+#search-input {
+    height: 40px;
+    padding-left: 10px;
+    width: 200px;
+}
+
+#search-button {
+    padding: 14px 0;
+    width: 80px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: var(--button-color);
+    border: none;
+    cursor: pointer;
+}
