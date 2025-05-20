@@ -25,7 +25,7 @@ const fetchInfo = async () => {
         const creatureList = await fetch(`https://rpg-creature-api.freecodecamp.rocks/api/creature/${nameOrId}`);
         const data = await creatureList.json();
         console.log(data);
-        creatureInfo(data);
+        displayCreatureInfo(data);
         
     } catch (err) {
         alert("Creature not found");
@@ -35,7 +35,7 @@ const fetchInfo = async () => {
 }
 
 
-const creatureInfo = (data) => {
+const displayCreatureInfo = (data) => {
     const { name, id, weight, height, types, stats, special } = data;
 
     creatureName.textContent = `${name.toUpperCase()}`;
